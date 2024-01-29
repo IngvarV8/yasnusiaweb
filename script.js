@@ -41,9 +41,7 @@ button.addEventListener("mouseenter", function(){
     var unit = document.createElement("li");
     unit.innerHTML = "sample1";
     list.appendChild(unit);
-})
-
-
+});
 
 function parseInput(){
     

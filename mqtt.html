@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>WebSocket Client</title>
+    <script src="wsscript.js"></script>
+    <script src="mqttscript.js"></script>
+</head>
+
+<body>
+    <header>
+        <button>
+            <a href="https://www.hivemq.com/blog/mqtt-essentials-part-8-retained-messages/" target="_blank">HiveMQ</a>
+        </button>
+        <button class="btn" onclick="sendMessage()">Send message to server</button>
+        <button class="btn" onclick="orderTable()">Order table</button>
+    </header>
+
+    <hr>
+    
+    <table id="table" border="1" class="styled-table">
+        <tr>
+            <th>Topic</th>
+            <th>Status</th>
+            <th>Last updated</th>
+        </tr>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+.sample1{
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sample2{
+    color: chartreuse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.window{
+    border-style: dashed;
+    color: olive;
+}
+
+.footer_button{
+    width: 500px;
+    height: 300px;
+    background-color: lightblue;
+    display: contents;
+    border-style: dashed;
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    color: rgb(80, 21, 114);
+}
+
+.styled-table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+.styled-table th, .styled-table td {
+    border: 1px solid #b49595;
+    background-color: rgb(194, 202, 201);
+    text-align: left;
+    padding: 8px;
+}
+
+.styled-table th {
+    background-color: #d17474;
+}

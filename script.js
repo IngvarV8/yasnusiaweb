@@ -43,3 +43,37 @@ button.addEventListener("mouseenter", function(){
     list.appendChild(unit);
 })
 
+
+
+function parseInput(){
+    
+    let el = document.getElementById("input");
+    let inputValue = el.value;
+    let container = document.getElementById("container");
+    //alert(inputValue.toUpperCase());
+    const myArray = [1, 2];
+    var randomElement = getRandomNumberFromArray(myArray);
+    randomElement = randomElement.toString();
+
+    if (inputValue.toUpperCase() == "ПОКАЖИ НАС"){
+        let newImg = document.createElement("img");
+        newImg.src = "us" + randomElement + ".jpg";
+        newImg.style = "height: 100px";
+        container.appendChild(newImg);
+        return;
+    }
+
+
+    let newPar = document.createElement("p");
+    newPar.innerHTML = inputValue;
+
+    container.appendChild(newPar);
+
+
+}
+
+
+function getRandomNumberFromArray(arr) {
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
+}

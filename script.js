@@ -19,16 +19,13 @@ function handleClick(){
 
 var homeImage = document.getElementById("home_img");
 homeImage.addEventListener("mouseover", function(){
-    this.style = "box-shadow: 3px 3px 3px grey";
-    this.style = "background-color: red"
+    //this.style = "box-shadow: 3px 3px 3px grey";
+    //this.style = "background-color: red"
+    this.classList.add("home_img_zoomed");
 })
 
 homeImage.addEventListener("mouseout", function(){
-    this.style = "";
-})
-
-homeImage.addEventListener("scroll", function(){
-    this.style = "background-color: red";
+    this.classList.remove("home_img_zoomed");
 })
 
 
@@ -44,34 +41,46 @@ button.addEventListener("mouseenter", function(){
 });
 
 function parseInput(){
-    
     let el = document.getElementById("input");
     let inputValue = el.value;
     let container = document.getElementById("container");
-    //alert(inputValue.toUpperCase());
     const myArray = [1, 2];
     var randomElement = getRandomNumberFromArray(myArray);
     randomElement = randomElement.toString();
 
     if (inputValue.toUpperCase() == "ПОКАЖИ НАС"){
         let newImg = document.createElement("img");
-        newImg.src = "us" + randomElement + ".jpg";
+        newImg.src = "img/us" + randomElement + ".jpg";
         newImg.style = "height: 100px";
         container.appendChild(newImg);
         return;
     }
 
-
     let newPar = document.createElement("p");
     newPar.innerHTML = inputValue;
 
     container.appendChild(newPar);
-
-
 }
 
 
 function getRandomNumberFromArray(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
     return arr[randomIndex];
+}
+
+function makeSmaller(){
+    let img = document.getElementById("home_img");
+    let width = img.style.getPropertyValue("width");
+    //console.log(typeof width);
+    width = parseInt(width, 10);
+    //console.log(typeof width);
+    //console.log(width);
+    img.style.width = (width - 20) + "px";
+}
+
+function makeBigger(){
+    let img = document.getElementById("home_img");
+    let width = img.style.getPropertyValue("width");
+    width = parseInt(width, 10);
+    img.style.width = (width + 20) + "px";
 }

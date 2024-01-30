@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Trying JS</title>
+    <title>Наші приколи</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
@@ -27,8 +27,13 @@
         <h2 id="head2" class="sample2" onclick="handleClick()">Header Two</h2>
 
         <button id="button" onclick="handleClick()">Start</button>
-        <img id="home_img" src="Home-icon.svg.png"></img>
-        <ul id="list">List</ul>
+        
+        <div class="home_img_container">
+            <img id="home_img" src="img/Home-icon.svg.png" style="width: 300px;"></img>
+        </div>
+        
+        <button onclick="makeBigger()">Make bigger</button>
+        <button onclick="makeSmaller()">Make smaller</button>
 
         <div id="root_container"></div>
 

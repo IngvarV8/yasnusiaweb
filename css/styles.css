@@ -45,4 +45,14 @@
     background-color: #d17474;
 }
 
+.home_img_container{
+    height: 700px;
+    width: 700px;
+    background-color: cornflowerblue;
+}
+
+.home_img_zoomed{
+    background-color: burlywood;
+    box-shadow: 3px 3px 3px grey";
+}
 

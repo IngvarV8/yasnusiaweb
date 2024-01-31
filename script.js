@@ -90,7 +90,7 @@ minigameSizeSetButton.addEventListener("click", handleGameSize);
 
 function handleGameSize() {
     if(document.getElementById("game_table") != null){
-        return;
+        clearTable();
     }
 
     let width = document.getElementById("minigame_input_width").value;

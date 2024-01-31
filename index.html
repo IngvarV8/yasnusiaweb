@@ -27,7 +27,7 @@
         <h2 id="head2" class="sample2" onclick="handleClick()">Header Two</h2>
 
         <button id="button" onclick="handleClick()">Start</button>
-        
+
         <div class="home_img_container">
             <img id="home_img" src="img/Home-icon.svg.png" style="width: 300px;"></img>
         </div>
@@ -37,7 +37,7 @@
 
         <div id="root_container"></div>
 
-        <div class="window">
+        <div class="window" style="margin: 30px;">
             <ul>
                 <li>Item 1</li>
                 <li>Item 2</li>
@@ -46,10 +46,23 @@
             </ul>
         </div>
 
+        <div class="minigame" id="minigame">
+            <caption><h2>A little game</h2></caption>
+            
+            </table>
+
+            <div id="minigame_form">
+                <input type="text" placeholder="введи ширину" id="minigame_input_width">
+                <input type="text"  placeholder="введи висоту" id="minigame_input_height">
+                <input type="button" value="Set" id="minigame_size_set_button">
+                <button id="clear_button" onclick="clearTable()">Clear table</button>
+            </div>
+        </div>
+
         <a href="https://www.youtube.com/watch?v=D0q0QeQbw9U&t=957s&pp=ygUFYXlheWE%3D">Something</a>
     </body>
 
-    <footer>
+    <footer id="footer">
         <div>
             <a href="https://www.speedtest.net/ru" class="footer_button">Test speed</a>
         </div>

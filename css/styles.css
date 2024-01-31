@@ -56,3 +56,21 @@
     box-shadow: 3px 3px 3px grey";
 }
 
+.minigame {
+    background-color: bisque;
+    text-align: center;
+}
+
+.game-table {
+    background-color: rgb(161, 199, 235);
+    padding: 10px;
+}
+
+.minigame-cell{
+    padding: 10px;
+    margin: 40px;
+    border: 2px solid #340885;
+    background-color: chartreuse;
+    border-radius: 7px;
+}
+

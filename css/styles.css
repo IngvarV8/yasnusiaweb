@@ -1,19 +1,17 @@
-.sample1{
-    color: blue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+header {
+    background-color: #8963d1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex; 
+    align-items: center;
 }
 
-.sample2{
-    color: chartreuse;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.window{
+.window {
     border-style: dashed;
     color: olive;
 }
 
-.footer_button{
+.footer_button {
     width: 500px;
     height: 300px;
     background-color: lightblue;
@@ -31,10 +29,11 @@
     border-collapse: collapse;
     width: 100%;
     border-radius: 10px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
-.styled-table th, .styled-table td {
+.styled-table th,
+.styled-table td {
     border: 1px solid #b49595;
     background-color: rgb(194, 202, 201);
     text-align: left;
@@ -45,15 +44,16 @@
     background-color: #d17474;
 }
 
-.home_img_container{
+.home_img_container {
     height: 700px;
     width: 700px;
     background-color: cornflowerblue;
 }
 
-.home_img_zoomed{
+.home_img_zoomed {
     background-color: burlywood;
     box-shadow: 3px 3px 3px grey";
+
 }
 
 .minigame {
@@ -66,7 +66,7 @@
     padding: 10px;
 }
 
-.minigame-cell{
+.minigame-cell {
     padding: 10px;
     margin: 40px;
     border: 2px solid #340885;
@@ -74,3 +74,76 @@
     border-radius: 7px;
 }
 
+.minigame-cell-current {
+    background-color: rgb(173, 22, 22);
+}
+
+@keyframes enlarge-photo {
+    from {
+        width: 50px;
+        background-color: rgb(212, 95, 167);
+        left: 200px;
+        top: 25px;
+    }
+
+    to {
+        width: 100px;
+        background-color: rgb(190, 0, 0);
+        left: 175px;
+        top: 0px;
+    }
+}
+
+@keyframes pop-header-animation {
+    from {
+        right: 500px;
+        background-color: #340885;
+    }
+
+    to {
+        right: 0px;
+        background-color: aliceblue;
+    }
+}
+
+@keyframes cell-animation {
+    from {
+        width: 100px;
+        height: 100px;
+    }
+
+    to {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@keyframes cell-animation-color {
+    from {}
+
+    to {
+        background-color: rgb(80, 21, 114);
+        left: 50px;
+    }
+}
+
+.image-animation {
+    animation-name: enlarge-photo;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-direction: alternate-reverse;
+    animation-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.9, 1, 0.9, 0.9);
+}
+
+.text-animation {
+    animation-name: pop-header-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+td:hover {
+    animation-name: cell-animation-color;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}

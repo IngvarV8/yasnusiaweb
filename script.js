@@ -1,18 +1,3 @@
-var text = "sample text";
-
-
-//document.write(text.length);
-//document.write(text.toUpperCase());
-
-//alert("alert msg");
-//document.write("<h2 style='color:blue'>Header Two</h2>")
-
-//var v = window.prompt("Tell: ");
-
-var h = document.getElementById("head1");
-//h.style.style = "css/style.css";
-h.classList.add("sample2")
-
 function handleClick() {
     alert("You clicked!");
 }
@@ -116,7 +101,59 @@ function handleGameSize() {
             trNew.appendChild(tdNew);
         }
     }
+    var firstChildTd = document.getElementById("game_table").querySelector("td");
+    //firstChildTd.classList.remove("minigame-cell");
+    firstChildTd.classList.add("minigame-cell-current");
+}
 
+function acceptGuess(){
+    //handleGameSize();
+    let acceptPlayersGuess = document.getElementById("accept_players_guess");
+    let cells = document.getElementById("game_table").querySelectorAll("td");
+    console.log(cells);
+    for(let x=0; x<cells.length; x++){
+        if(cells[x].classList.contains("minigame-cell-current")){
+            cells[x+1].classList.add("minigame-cell-current");
+            cells[x].classList.remove("minigame-cell-current");
+            if(cells[x].innerText == document.getElementById("accept_players_guess")){
+               //parseInt(document.getElementById("scores").value)++;
+            }
+            break;
+        }
+    }
+    //while()
+    //if(acceptPlayersGuess.innerText == )
+}
+
+function generateScores(){
+    let playersUi = document.getElementById("players_ui");
+    var scores = document.createElement("a");
+    scores.id = "scores";
+    scores.innerText = "0-0";
+    playersUi.appendChild(scores);
+}
+
+function generatePlayerNames(){
+    let playersUi = document.getElementById("players_ui");
+    while(playersUi.firstChild){
+        playersUi.firstChild.remove();
+    }
+
+    var p = document.createElement("p");
+    p.id = "players_ui_p";
+    var player1 = document.getElementById("minigame_input_player1").value;
+    var player2 = document.getElementById("minigame_input_player2").value;
+    console.log(player1);
+    p.innerText = player1 + " vs. " + player2;
+    playersUi.appendChild(p);
+    generateScores();
+}
+
+function resetGame(){
+    if(document.getElementById("game_table") != null){
+        clearTable();
+    }
+    handleGameSize();
 }
 
 function clearTable(){

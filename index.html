@@ -1,9 +1,14 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
     <title>Наші приколи</title>
+
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
@@ -12,12 +17,19 @@
 </head>
 
 <body>
-    <header>Приколи для Янусі
-        <nav>One Two</nav>
+    <header>
+        <img src="img/yawn.jpg" alt="/" style="padding: 10px; display: inline; border-radius: 10%;">
+        <span style="display: block;">
+            Lorem ipsum dolor sit amet. Eos distinctio numquam ut voluptas tenetur et ducimus voluptas ea saepe beatae eum rerum sint id molestias dignissimos est consequatur similique? Qui dolor ratione ut architecto possimus ut dolorem reprehenderit qui expedita inventore. Id numquam vero sit consequuntur quasi At voluptas iste in ducimus Quis.
+        </span>
     </header>
 
-    <body>
-        <h1 id="head1" class="sample1">Приколи для Янусі</h1>
+    <main>
+        <div>
+            <img src="img/heart.svg" class="image-animation" style="width: 50px; position: absolute; left: 200px; top: 0px;"></img>
+        </div>
+
+        <h1 class="text-animation" style="padding: 20px;">Приколи для Янусі</h1>
         
         <input id="input" type="text">
         <button onclick="parseInput()">Accept</button>
@@ -29,7 +41,7 @@
         <button id="button" onclick="handleClick()">Start</button>
 
         <div class="home_img_container">
-            <img id="home_img" src="img/Home-icon.svg.png" style="width: 300px;"></img>
+            
         </div>
         
         <button onclick="makeBigger()">Make bigger</button>
@@ -56,11 +68,20 @@
                 <input type="text"  placeholder="введи висоту" id="minigame_input_height">
                 <input type="button" value="Set" id="minigame_size_set_button">
                 <button id="clear_button" onclick="clearTable()">Clear table</button>
+                <button id="reset_button" onclick="clearTable()">Reset game</button>
+                <input type="text" placeholder="введи ім'я гравця 1" id="minigame_input_player1">
+                <input type="text"  placeholder="введи ім'я гравця 2" id="minigame_input_player2">
+                <button id="accept_players" onclick="generatePlayerNames()">Accept players</button>
+                <input type="text"  placeholder="Guess:" id="players_guess">
+                <button id="accept_players_guess" onclick="acceptGuess()">Accept guess</button>
+            </div>
+            <div id="players_ui" style="background-color: rgb(148, 137, 123);">
+
             </div>
         </div>
 
         <a href="https://www.youtube.com/watch?v=D0q0QeQbw9U&t=957s&pp=ygUFYXlheWE%3D">Something</a>
-    </body>
+    </main>
 
     <footer id="footer">
         <div>

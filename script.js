@@ -1,5 +1,11 @@
-function handleClick() {
-    alert("You clicked!");
+function drawButton() {
+    var range = 100;
+    var e = document.createElement("button");
+    e.style = "background-color: yellow; width: 200px; height: 100px; position: relative;";
+    e.classList.add("drawn-button");
+    e.innerHTML = Math.round(Math.random()*range); 
+    var container = document.getElementById("container");
+    container.appendChild(e);
 }
 
 var homeImage = document.getElementById("home_img");

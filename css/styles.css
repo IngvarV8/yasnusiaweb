@@ -44,7 +44,7 @@ header {
     background-color: #d17474;
 }
 
-.home_img_container {
+.container {
     height: 700px;
     width: 700px;
     background-color: cornflowerblue;
@@ -94,6 +94,16 @@ header {
     }
 }
 
+@keyframes draw-element {
+    from {
+       right: 1000px;
+    }
+
+    to {
+        right: 0px;
+    }
+}
+
 @keyframes pop-header-animation {
     from {
         right: 500px;
@@ -125,6 +135,12 @@ header {
         background-color: rgb(80, 21, 114);
         left: 50px;
     }
+}
+
+.drawn-button{
+    animation-name: draw-element;
+    animation-duration: 550ms;
+    animation-delay: 0s;
 }
 
 .image-animation {
